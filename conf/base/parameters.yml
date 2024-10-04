@@ -1,0 +1,6 @@
+date_column: "Date"
+target_column: "RainTomorrow"
+test_size: 0.2
+random_state: 0
+model_filename: logistic_regression_model.pkl
+model_filepath: "data/06_models"

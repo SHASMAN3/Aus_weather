@@ -1,0 +1,117 @@
+weather_aus_raw:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/weatherAUS.csv
+  # more about layers in the Data Engineering Convention:
+  # https://kedro.readthedocs.io/en/stable/03_tutorial/06_visualise_pipeline.html#interact-with-data-engineering-convention
+
+# weather_data: csv
+# filepath: pandas_filtered/data01.csv
+
+filtered_data:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/filtered_data.csv
+
+inference_data:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/inference_data.csv
+
+processed_data:
+  type: pandas.CSVDataset
+  filepath: data/03_primary/processed_data.csv
+
+processed_data_infer:
+  type: pandas.CSVDataset
+  filepath: data/03_primary/processed_data_infer.csv
+
+imputed_data:
+  type: pandas.CSVDataset
+  filepath: data/03_primary/imputed_data.csv
+
+imputed_data_infer:
+  type: pandas.CSVDataset
+  filepath: data/03_primary/imputed_data_infer.csv
+
+encoded_data:
+  type: pandas.CSVDataset
+  filepath: data/03_primary/encoded_data.csv
+
+encoded_data_infer:
+  type: pandas.CSVDataset
+  filepath: data/03_primary/encoded_data_infer.csv
+
+label_encoders:
+  type: pickle.PickleDataset
+  filepath: data/06_models/label_encoders.pkl
+
+float_data:
+  type: pandas.CSVDataset
+  filepath: data/04_feature/float_data.csv  
+
+float_data_infer:
+  type: pandas.CSVDataset
+  filepath: data/04_feature/float_data_infer.csv
+
+outlier_free_data:
+  type: pandas.CSVDataset
+  filepath: data/04_feature/outlier_free_data.csv
+
+scaled_data:
+  type: pandas.CSVDataset
+  filepath: data/04_feature/scaled_data.csv
+
+scaled_data_infer:
+  type: pandas.CSVDataset
+  filepath: data/04_feature/scaled_data_infer.csv
+
+X:
+  type: pandas.CSVDataset
+  filepath: data/05_model_input/X.csv
+
+y:
+  type: pandas.CSVDataset
+  filepath: data/05_model_input/y.csv
+
+X_infer:
+  type: pandas.CSVDataset
+  filepath: data/05_model_input/X_infer.csv
+
+y_infer:
+  type: pandas.CSVDataset
+  filepath: data/05_model_input/y_infer.csv
+
+X_train:
+  type: pandas.CSVDataset
+  filepath: data/05_model_input/X_train.csv
+
+X_test:
+  type: pandas.CSVDataset
+  filepath: data/05_model_input/X_test.csv
+
+y_train:
+  type: pandas.CSVDataset
+  filepath: data/05_model_input/y_train.csv
+
+y_test:
+  type: pandas.CSVDataset
+  filepath: data/05_model_input/y_test.csv
+
+y_pred_train_df:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/y_pred_train_df.csv
+
+y_pred_test_df:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/y_pred_test_df.csv
+
+logreg_model:
+  type: pickle.PickleDataset
+  filepath: data/06_models/logreg_model.pkl
+
+evaluation_results:
+  type: pandas.CSVDataset
+  filepath: data/08_reporting/evaluation_results.csv
+
+updated_inference_data:
+  type: pandas.CSVDataset
+  filepath: data/08_reporting/updated_inference_data.csv
+
